@@ -32,38 +32,74 @@ Gravitation s'adresse aux **Hardcore Gamers** appréciant le gameplay 2D et rét
 
 ## Gameplay
 Le joueur contrôlera un vaisseau **triangulaire**. Il pourra le faire avancer dans la direction vers laquelle le vaisseau pointe à l'aide de propulseur et pourra également le faire pivoter.
-Le vaisseau subira la **gravité**,il sera donc attiré vers le bas de l'écran. Le joueur jouera avec celle-ci afin de manoeuvrer au mieux dans les différents niveaux.
+Le vaisseau subira la **gravité**, il sera donc attiré vers le bas de l'écran. Le joueur jouera avec celle-ci afin de manoeuvrer au mieux dans les différents niveaux.
 Cette gravité sera d'ailleurs variable d'un niveau à l'autre, créant ainsi différent contextes auxquels le joueur devra s'adapter. Il lui sera également possible de tirer des **projectiles**.
 Le projectile de base se déplace lentement, sur une ligne droite, dans la direction du vaisseau. D'autres projectiles, plus puissants, pourront être acquis grâce à des **Power-Up**. Ils seront alors limité soit en nombre d'utilisation, soit en temps.
 
 ## Contrôles par défaut
-Desktop:
-Joueur 1:
-Orienter le vaisseau: Flèche gauche et droite.
-Propulseur: Flèche du Haut.
-Tir: Entrée.
 
-Joueur 2:
-Orienter le vaisseau: QD (en AZERTY), AD (en QWERTY).
-Propulseur: Z (en AZERTY), W en (QWERTY).
+* Desktop:  
+		Joueur 1:  
+		Orienter le vaisseau: Flèche gauche et droite.  
+		Propulseur: Flèche du Haut.  
+		Tir: Entrée.
+
+		Joueur 2:  
+		Orienter le vaisseau: QD (en AZERTY), AD (en QWERTY).  
+		Propulseur: Z (en AZERTY), W en (QWERTY).  
 
 
-Tablette/Smartphone:
-Orienter le vaisseau: Gyroscope.
-Propulseur: "Touch" moitié basse de l'écran.
-Tir: "Touch" moitié haute de l'écran.
+* Tablette/Smartphone:  
+		Orienter le vaisseau: Gyroscope.  
+		Propulseur: "Touch" moitié basse de l'écran.  
+		Tir: "Touch" moitié haute de l'écran.
 
 ## Charte Graphique
-**Pixel Art**  
-**Rétro Scifi**  
-**90's**  
-**Neon**  
+
+### Mots-clé
+	#PixelArt
+	#RetroScifi
+	#Synthwave
+	#Neon
+
+![Gravitation Net Yaroze Original](images/demo-grav.jpg "Gravitation Net Yaroze Original")
+
+![Gradius](images/gradius.jpg "Gradius")
+
+![Ship](images/vs.jpg "Ship")
+
+![Collosus](images/collosus.jpg "Collosus")
+
+![Ice](images/ice.jpg "Ice")
+
+![Pieuvre](images/pieuvre.jpg "Pieuvre")
+
+![Pirate](images/pirate.jpg "Pirate")
+
+![War](images/war.jpg "War")
+
+![Galion](images/galion.jpg "Galion")
+
+![Lady](images/lady.jpg "Lady")
+
+![Door](images/door.jpg "Door")
+
+![Logo](images/logo.jpg "Logo")
+
+![Pyramid](images/pyramid.jpg "Pyramid")
+
+![Panther](images/panther.jpg "Panther")
+
+![Retro](images/retro.jpg "Retro")
+
+![Blood Dragon](images/blooddragon.jpg "Blood Dragon")
+
+
 
 ## Arborescence du site
 ![Arborescence du site](Gravitation-like.png "Arborescence du site")
 
 ## Accueil
-
 En arrivant sur la page d'accueil, sans être connecté, trois choix s'offrent au joueur:
 
 * Play
@@ -115,10 +151,10 @@ Il sera également possible de se conneceter rapidement via les réseaux sociaux
 Un bouton **Create Account** sera disponible en bas du formulaire pour les joueurs désirant créer un compte.
 
 ##### Create Account
-L'utilisateur devra remplir un formulaire comprenant:
-Nom d'utilisateur.
-Email.
-Mot de passe.
+L'utilisateur devra remplir un formulaire comprenant:  
+Nom d'utilisateur.  
+Email.  
+Mot de passe.  
 Une mesure contre les robots devra être mis en place.
 
 Une fois connecté, l'utilisateur accède alors au **Menu**.
@@ -129,7 +165,7 @@ Le **Menu** Comprend :
 * Profile
 * Configuration
 * Friends
-* Ship
+* Ships
 * My Ranking
 * PLAY
 
