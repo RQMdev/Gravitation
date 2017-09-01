@@ -31,10 +31,12 @@ Les utilisateurs auront la possibilité de créer un compte utilisateur avec un 
 Gravitation s'adresse aux **Hardcore Gamers** appréciant le gameplay 2D et rétro, les jeux de courses et de combats *compétitif*.
 
 ## Gameplay
-Le joueur contrôlera un vaisseau **triangulaire**. Il pourra le faire avancer dans la direction vers laquelle le vaisseau pointe à l'aide de propulseur et pourra également le faire pivoter.
+Le joueur contrôlera un vaisseau **triangulaire**. Il pourra le faire avancer dans la direction vers laquelle le vaisseau pointe à l'aide de propulseur et pourra également le faire pivoter.  
+
 Le vaisseau subira la **gravité**, il sera donc attiré vers le bas de l'écran. Le joueur jouera avec celle-ci afin de manoeuvrer au mieux dans les différents niveaux.
-Cette gravité sera d'ailleurs variable d'un niveau à l'autre, créant ainsi différent contextes auxquels le joueur devra s'adapter. Il lui sera également possible de tirer des **projectiles**.
-Le projectile de base se déplace lentement, sur une ligne droite, dans la direction du vaisseau. D'autres projectiles, plus puissants, pourront être acquis grâce à des **Power-Up**. Ils seront alors limité soit en nombre d'utilisation, soit en temps.
+Cette gravité sera d'ailleurs variable d'un niveau à l'autre, créant ainsi différent contextes auxquels le joueur devra s'adapter. Il lui sera également possible de tirer des **projectiles**.  
+
+Le projectile de base se déplace lentement, sur une ligne droite, dans la direction du vaisseau. D'autres projectiles, plus puissants, pourront être acquis grâce à des **Power-Up**. Ils seront alors limité soit en nombre d'utilisation, soit en temps.  
 
 ## Contrôles par défaut
 
@@ -180,7 +182,7 @@ il y est possible de:
 * Changer sa description.
 
 ##### Configuration
-Cette section permet à l'utilisateur de changer les configurations des touches, ainsi que des réglages particuliers liés au jeu.
+Cette section permet à l'utilisateur de changer les configurations des touches, ainsi que des réglages particuliers liés au jeu. Une option permettra de changer le comportement de la touche de tir, pour qu'une pression de cette touche active/désactive le tir automatique.
 
 ##### Friends
 Ici, l'utilisateur pourra gérer sa liste d'amis. Il verra ses amis connectés et pourra leur envoyer des messages ainsi que les inviter en parties.
