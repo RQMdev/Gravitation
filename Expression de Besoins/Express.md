@@ -38,6 +38,25 @@ Cette gravité sera d'ailleurs variable d'un niveau à l'autre, créant ainsi di
 
 Le projectile de base se déplace lentement, sur une ligne droite, dans la direction du vaisseau. D'autres projectiles, plus puissants, pourront être acquis grâce à des **Power-Up**. Ils seront alors limité soit en nombre d'utilisation, soit en temps.  
 
+## Mode Solo
+Le mode Solo raconte l'histoire de notre héros, échoué sur une planète inconnu après que son vaisseau mère ai subit une attaque elle même d'origine inconnu. Il semble être le dernier survivant et va parcourir plusieurs planète à la recherche d'autre survivant et d'un moyen de recontacter sa civilisation.
+
+Le mode Solo sera découpé en plusieurs niveau, à la difficulté croissante, représentant chacun une nouvelle zone de la planète qu'il explore. Chaque niveau aura un environnement différent, une gravité différente, et des ennemis différent.
+
+### planète 1 : Rocks.
+Le premier niveau est une planète rocheuse, à l'apparence désertique. La difficulté sera modéré, et le nombre d'ennemis très bas. Le but étant de laissé le joueur prendre en main les contrôles et d'installer l'ambiance du jeu.
+
+Le joueur rencontra son premier Power-Up, lui donnant l'habilité de tirer des munitions basiques.
+
+### planète 2 : Jungle.
+Le second niveau se déroulera dans une jungle.
+
+Le joueur rencontrera son second Power-Up, lui donnant l'habilité de tirer trois munitions a la fois, dans trois direction différentes.
+
+### planète 3 : Under Water.
+### planète 4 : Lava.
+### planète 5 : Exploding Planet.
+
 ## Contrôles par défaut
 
 * Desktop:  
