@@ -3,8 +3,9 @@ window.onload = function() {
 		var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 		function preload () {
-				game.load.tilemap('map', 'assets/maps/map1.json', null, Phaser.Tilemap.TILED_JSON);
-				game.load.image('terrain_tileset', 'assets/tilesets/terrain_tileset.png');
+				game.load.tilemap('map', 'assets/maps/map2.json', null, Phaser.Tilemap.TILED_JSON);
+				game.load.image('terrain_tileset', 'assets/tilesets/terrain_tileset.png', 32, 32);
+				game.load.image('mininicular', 'assets/tilesets/mininicular.png');
 				game.load.image('bg', 'assets/sprites/debug-grid-1920x1920.png');
 				game.load.image('starfield', 'assets/sprites/starfield.jpg');
 				game.load.image('ground', 'assets/sprites/platform.png');
@@ -13,19 +14,25 @@ window.onload = function() {
 				game.load.image('bullet', 'assets/sprites/bullet.png');
 		}
 
-		var platforms;
+		var map;
+		var layer;
+		var layer2;
 		var player;
 		var stars;
-		var score = 0;
+		var score = 3;
 		var scoreText;
 		var powerUps = 0;
 		var tileSprite;
+		var invincibleTime = 100;
 
 		function create () {
 				map = game.add.tilemap('map');
-				map.addTilesetImage('terrain_tileset');
-				map.setCollisionBetween(1, 12);
+				map.addTilesetImage('mininicular', 'mininicular');
+				// layer = map.createLayer(1);
+				layer2 = map.createLayer('Tile Layer 2');
 				layer = map.createLayer('Tile Layer 1');
+				map.setCollision(1, true, layer);
+				// layer2.resizeWorld();
 				layer.resizeWorld();
 
 				game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -33,12 +40,12 @@ window.onload = function() {
 				// Stars
 				stars = game.add.group();
 				stars.enableBody = true;
-				star = stars.create(game.world.width - 150, 128, 'star');
+				star = stars.create(game.world.width - 350, 3000, 'star');
 				star.body.gravity.y = 300;
 				star.body.bounce.y = 0.3;
 
 				// Player
-				player = game.add.sprite(150, game.world.height - 150, 'ship');
+				player = game.add.sprite(1560, game.world.height - 150, 'ship');
 				player.anchor.setTo(0.5, 0.5);
 				game.physics.arcade.enable(player);
 
@@ -54,38 +61,46 @@ window.onload = function() {
 				game.camera.follow(player);
 
 				// Weapons
-				weapon = game.add.weapon(30, 'bullet');
-				weapon.scale = 0.1;
-				weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-				weapon.bulletSpeed = 500;
-				weapon.fireRate = 300;
+				bullet = game.add.weapon(30, 'bullet');
+				bullet.scale = 0.1;
+				bullet.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
+				bullet.bulletSpeed = 500;
+				bullet.fireRate = 300;
 
-				weapon.trackSprite(player, 16, 0, true);
-				console.log(weapon);
+				bullet.trackSprite(player, 16, 0, true);
+				console.log(bullet);
 
 
 				// Keys
 				cursors = game.input.keyboard.createCursorKeys();
 				fireButton = game.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
 				// Score
-				scoreText = game.add.text(16, 16, '0', {fontSize: '32px', fill: '#000'});
+				scoreText = game.add.text(16, 16, score, {fontSize: '32px', fill: '#fff'});
+				scoreText.fixedToCamera = true;
 				// Fullscreen
 				game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
 		}
 
 
 		function update() {
-
-			function collectStar (player, star){
-				star.kill();
-				powerUps++;
+			// Collision
+			var hitWall = game.physics.arcade.collide(player, layer);
+			game.physics.arcade.collide(stars, layer);
+			game.physics.arcade.overlap(player, stars, collectStar, null, this);
+			game.physics.arcade.overlap(bullet, layer, destroyBullet, null, this);
+			if (invincibleTime > 0){
+				invincibleTime--;
 			}
 
-			// Collision
-			var hitPlatform = game.physics.arcade.collide(player, platforms);
-			game.physics.arcade.collide(stars, layer);
-			game.physics.arcade.collide(player, layer);
-			game.physics.arcade.overlap(player, stars, collectStar, null, this);
+			if (hitWall && invincibleTime == 0){
+				score = score - 1;
+				scoreText.text = score;
+				invincibleTime = 100;
+			}
+
+			if (score <= 0){
+				player.kill();
+			}
 
 			if (cursors.up.isDown){
 				game.physics.arcade.accelerationFromRotation(player.rotation, 900, player.body.acceleration);
@@ -102,8 +117,17 @@ window.onload = function() {
 			}
 
 			if (fireButton.isDown && powerUps == 1){
-				weapon.fire();
+				bullet.fire();
 			}
+		}
+
+		function collectStar (player, star){
+			star.kill();
+			powerUps++;
+		}
+
+		function destroyBullet (bullet, layer){
+			bullet.kill();
 		}
 
 };
