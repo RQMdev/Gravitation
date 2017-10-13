@@ -10,7 +10,7 @@ window.onload = function() {
 				game.load.image('starfield', 'assets/sprites/starfield.jpg');
 				game.load.image('ground', 'assets/sprites/platform.png');
 				game.load.image('star', 'assets/sprites/star.png');
-				game.load.image('ship', 'assets/sprites/triangle.png');
+				game.load.image('ship', 'assets/sprites/ship.png');
 				game.load.image('bullet', 'assets/sprites/bullet.png');
 		}
 
@@ -29,7 +29,12 @@ window.onload = function() {
 				map = game.add.tilemap('map');
 				map.addTilesetImage('mininicular', 'mininicular');
 				// layer = map.createLayer(1);
+				layer3 = map.createLayer('Tile Layer 3');
+				layer3.scrollFactorX = 0.5;
+				layer3.scrollFactorY = 0.5;
 				layer2 = map.createLayer('Tile Layer 2');
+				layer2.scrollFactorX = 0.75;
+				layer2.scrollFactorY = 0.75;
 				layer = map.createLayer('Tile Layer 1');
 				map.setCollision(1, true, layer);
 				// layer2.resizeWorld();
@@ -87,7 +92,7 @@ window.onload = function() {
 			var hitWall = game.physics.arcade.collide(player, layer);
 			game.physics.arcade.collide(stars, layer);
 			game.physics.arcade.overlap(player, stars, collectStar, null, this);
-			game.physics.arcade.overlap(bullet, layer, destroyBullet, null, this);
+			game.physics.arcade.collide(bullet.bullets, layer, destroyBullet);
 			if (invincibleTime > 0){
 				invincibleTime--;
 			}
