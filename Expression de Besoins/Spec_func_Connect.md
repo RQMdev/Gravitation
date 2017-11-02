@@ -7,7 +7,9 @@
 #### Formulaire de Connexion via le Compte Gravitation
 Trois champs seront disponible pour la connexion :
 * Username or E-mail
+(length:3min/16max Char: "a-z/A-Z/0-9/\_-")
 * Password
+(length:8min/30max Char: "a-z/A-Z/0-9/\_-!$@&#")
 * Password Confirmation
 
 Une fois le formulaire validé d'un click sur le bouton 'Valider', l'utilisateur recevra un e-mail lui proposant un lien de validation, une fois ce lien visité, sont compte sera activé, et l'utilisateur directement connecté.
