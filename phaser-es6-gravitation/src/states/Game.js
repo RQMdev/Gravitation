@@ -55,6 +55,8 @@ export default class extends Phaser.State {
     //     starStartingPositionY,
     //     playerStartingPositionX,
     //     playerStartingPositionY;
+    this.powerUps = 0;
+    this.invincibleTime = 100;
 
     this.map = this.add.tilemap('map');
     // Level 1
@@ -78,7 +80,7 @@ export default class extends Phaser.State {
     // Stars
     // Level 1 Position
     this.starStartingPositionX = 350;
-    this.starStartingPositionY = 100;
+    this.starStartingPositionY = this.game.world.height - 100;
 
     // Level 2 Position
     // starStartingPositionX = game.world.width - 350;
@@ -131,20 +133,28 @@ export default class extends Phaser.State {
     this.bullet2.fireRate = 300;
     this.bullet2.multiFire = true;
 
-    console.log(this.bullet);
-
     // Keys
     this.cursors = this.game.input.keyboard.createCursorKeys();
     this.fireButton = this.game.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
     // Score
+    this.score = 3;
     this.scoreText = this.game.add.text(16, 16, this.score, {fontSize: '32px', fill: '#fff'});
     this.scoreText.fixedToCamera = true;
     // Fullscreen
     this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
   }
 
-  update()
-  {
+  update () {
+    // Collision Methods
+    this.collectStar = function(player, star) {
+      star.kill();
+      this.powerUps++;
+    }
+
+    this.destroyBullet = function(bullet, layer) {
+      bullet.kill();
+    }
+
     // Collision
     this.hitWall = this.game.physics.arcade.collide(this.player, this.layer);
     this.game.physics.arcade.collide(this.stars, this.layer);
@@ -159,13 +169,13 @@ export default class extends Phaser.State {
     }
 
     if (this.hitWall && this.invincibleTime == 0){
-      this.score = score - 1;
-      this.scoreText.text = score;
+      this.score = this.score - 1;
+      this.scoreText.text = this.score;
       this.invincibleTime = 100;
       this.player.shield = game.add.sprite(16, 0, 'shield');
       this.player.shield.anchor.set(0.5);
       this.player.shield.scale.set(0.5);
-      this.player.addChild(player.shield);
+      this.player.addChild(this.player.shield);
     }
 
     if (this.score <= 0){
@@ -222,15 +232,6 @@ export default class extends Phaser.State {
       // 	}, this);
       // }
     }
-  }
-
-  collectStar = (player, star) => {
-    this.star.kill();
-    this.powerUps++;
-  }
-
-  destroyBullet = (bullet, layer) => {
-    this.bullet.kill();
   }
 
   render()
