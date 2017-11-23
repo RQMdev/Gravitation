@@ -111,7 +111,6 @@ export default class extends Phaser.State {
     this.player.body.bounce.y = 0;
     this.player.body.gravity.y = 300;
     this.player.body.collideWorldBounds = true;
-    console.log(this.player.body);
 
     this.game.camera.follow(this.player);
 
@@ -142,16 +141,15 @@ export default class extends Phaser.State {
     this.scoreText.fixedToCamera = true;
     // Fullscreen
     this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
-
   }
 
   update()
   {
     // Collision
     this.hitWall = this.game.physics.arcade.collide(this.player, this.layer);
-    game.physics.arcade.collide(this.stars, this.layer);
-    game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
-    game.physics.arcade.collide(this.bullet.bullets, this.layer, this.destroyBullet);
+    this.game.physics.arcade.collide(this.stars, this.layer);
+    this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
+    this.game.physics.arcade.collide(this.bullet.bullets, this.layer, this.destroyBullet);
     if (this.invincibleTime > 0){
       this.invincibleTime--;
     }
@@ -226,14 +224,12 @@ export default class extends Phaser.State {
     }
   }
 
-  collectStar (player, star)
-  {
+  collectStar = (player, star) => {
     this.star.kill();
     this.powerUps++;
   }
 
-  destroyBullet (bullet, layer)
-  {
+  destroyBullet = (bullet, layer) => {
     this.bullet.kill();
   }
 
