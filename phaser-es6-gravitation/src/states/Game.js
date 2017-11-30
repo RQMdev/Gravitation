@@ -1,13 +1,9 @@
 /* globals __DEV__ */
-import Phaser from 'phaser'
-import Mushroom from '../sprites/Mushroom'
+import Phaser from 'phaser';
+import Mushroom from '../sprites/Mushroom';
+import Player from '../sprites/Player';
 
 export default class extends Phaser.State {
-  init() {}
-  preload() {
-    this.game.time.advancedTiming = true;
-  }
-
   create()
   {
     // Add a Custom Banner
@@ -102,6 +98,16 @@ export default class extends Phaser.State {
     this.playerStartingPositionX = 300;
     this.playerStartingPositionY = game.world.height - 150;
 
+    // Create a new Instance of a Sprite Object
+    // this.player = new Player({
+    //   game: this.game,
+    //   x: this.playerStartingPositionX,
+    //   y: this.playerStartingPositionY,
+    //   asset: 'ship'
+    // });
+    // // this.game.physics.arcade.enable(this.player);
+    // this.camera.follow(this.player);
+
     // Level 2 Position
     // playerStartingPositionX = 1560;
     // playerStartingPositionY = game.world.height - 150;
@@ -116,8 +122,7 @@ export default class extends Phaser.State {
     this.player.body.bounce.y = 0;
     this.player.body.gravity.y = 300;
     this.player.body.collideWorldBounds = true;
-
-    this.game.camera.follow(this.player);
+    this.camera.follow(this.player);
 
     // WEAPON OBJECT
     this.bullet = game.add.weapon(100, 'bullet');
@@ -149,6 +154,7 @@ export default class extends Phaser.State {
   }
 
   update () {
+    console.log('Game.js Update !')
     // Collision Methods
     // Player VS PowerUp Func
     this.collectStar = function(player, star) {
@@ -255,8 +261,8 @@ export default class extends Phaser.State {
     this.game.debug.text(game.time.fps || '--', 2, 14, "#00ff00");
 
     // Add to debug your Sprite in DEV Mode.
-    // if (__DEV__) {
-    //   this.game.debug.spriteInfo(this.player, 32, 32)
-    // }
+    if (__DEV__) {
+      this.game.debug.spriteInfo(this.player, 32, 32)
+    }
   }
 }

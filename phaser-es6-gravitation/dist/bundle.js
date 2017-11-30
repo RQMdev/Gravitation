@@ -10701,6 +10701,7 @@ var _class = function (_Phaser$State) {
   _createClass(_class, [{
     key: 'init',
     value: function init() {
+      this.stage.disableVisibilityChange = true;
       this.stage.backgroundColor = '#EDEEC9';
       this.fontsReady = false;
       this.fontsLoaded = this.fontsLoaded.bind(this);
@@ -10787,6 +10788,8 @@ var _class = function (_Phaser$State) {
   }, {
     key: 'preload',
     value: function preload() {
+      this.game.time.advancedTiming = true;
+
       this.loaderBg = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBg');
       this.loaderBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBar');
       (0, _utils.centerGameObjects)([this.loaderBg, this.loaderBar]);
@@ -10865,6 +10868,10 @@ var _Mushroom = __webpack_require__(/*! ../sprites/Mushroom */ 340);
 
 var _Mushroom2 = _interopRequireDefault(_Mushroom);
 
+var _Player = __webpack_require__(/*! ../sprites/Player */ 343);
+
+var _Player2 = _interopRequireDefault(_Player);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10884,14 +10891,6 @@ var _class = function (_Phaser$State) {
   }
 
   _createClass(_class, [{
-    key: 'init',
-    value: function init() {}
-  }, {
-    key: 'preload',
-    value: function preload() {
-      this.game.time.advancedTiming = true;
-    }
-  }, {
     key: 'create',
     value: function create() {
       // Add a Custom Banner
@@ -10985,6 +10984,16 @@ var _class = function (_Phaser$State) {
       this.playerStartingPositionX = 300;
       this.playerStartingPositionY = game.world.height - 150;
 
+      // Create a new Instance of a Sprite Object
+      // this.player = new Player({
+      //   game: this.game,
+      //   x: this.playerStartingPositionX,
+      //   y: this.playerStartingPositionY,
+      //   asset: 'ship'
+      // });
+      // // this.game.physics.arcade.enable(this.player);
+      // this.camera.follow(this.player);
+
       // Level 2 Position
       // playerStartingPositionX = 1560;
       // playerStartingPositionY = game.world.height - 150;
@@ -10999,8 +11008,7 @@ var _class = function (_Phaser$State) {
       this.player.body.bounce.y = 0;
       this.player.body.gravity.y = 300;
       this.player.body.collideWorldBounds = true;
-
-      this.game.camera.follow(this.player);
+      this.camera.follow(this.player);
 
       // WEAPON OBJECT
       this.bullet = game.add.weapon(100, 'bullet');
@@ -11033,6 +11041,7 @@ var _class = function (_Phaser$State) {
   }, {
     key: 'update',
     value: function update() {
+      console.log('Game.js Update !');
       // Collision Methods
       // Player VS PowerUp Func
       this.collectStar = function (player, star) {
@@ -11139,9 +11148,9 @@ var _class = function (_Phaser$State) {
       this.game.debug.text(game.time.fps || '--', 2, 14, "#00ff00");
 
       // Add to debug your Sprite in DEV Mode.
-      // if (__DEV__) {
-      //   this.game.debug.spriteInfo(this.player, 32, 32)
-      // }
+      if (true) {
+        this.game.debug.spriteInfo(this.player, 32, 32);
+      }
     }
   }]);
 
@@ -11229,6 +11238,81 @@ exports.default = {
   gameHeight: 1080,
   localStorageName: 'phaseres6webpack'
 };
+
+/***/ }),
+/* 342 */,
+/* 343 */
+/*!*******************************!*\
+  !*** ./src/sprites/Player.js ***!
+  \*******************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _phaser = __webpack_require__(/*! phaser */ 46);
+
+var _phaser2 = _interopRequireDefault(_phaser);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Player = function (_Phaser$Sprite) {
+  _inherits(Player, _Phaser$Sprite);
+
+  function Player(_ref) {
+    var game = _ref.game,
+        x = _ref.x,
+        y = _ref.y,
+        asset = _ref.asset,
+        health = _ref.health;
+
+    _classCallCheck(this, Player);
+
+    var _this = _possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).call(this, game, x, y, asset));
+
+    _this.game = game;
+
+    _this.anchor.setTo(0.5);
+
+    _this.health = health;
+    _this.maxHealth = health;
+
+    _this.game.physics.arcade.enable(_this);
+    _this.rotation = -Math.PI / 2;
+    _this.body.drag.x = 200;
+    _this.body.drag.y = 100;
+    _this.body.maxVelocity.set(300);
+    _this.body.bounce.y = 0;
+    _this.body.gravity.y = 300;
+    _this.body.collideWorldBounds = true;
+    return _this;
+  }
+
+  _createClass(Player, [{
+    key: 'update',
+    value: function update() {
+      console.log('Player.js Update');
+    }
+  }]);
+
+  return Player;
+}(_phaser2.default.Sprite);
+
+exports.default = Player;
 
 /***/ })
 ],[128]);
