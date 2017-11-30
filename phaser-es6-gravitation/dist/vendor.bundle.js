@@ -147,7 +147,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 342);
+/******/ 	return __webpack_require__(__webpack_require__.s = 343);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -107588,7 +107588,7 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ 342:
+/***/ 343:
 /*!******************************************!*\
   !*** multi pixi p2 phaser webfontloader ***!
   \******************************************/
@@ -107598,13 +107598,13 @@ process.umask = function() { return 0; };
 
 __webpack_require__(/*! pixi */125);
 __webpack_require__(/*! p2 */126);
-__webpack_require__(/*! phaser */46);
+__webpack_require__(/*! phaser */42);
 module.exports = __webpack_require__(/*! webfontloader */127);
 
 
 /***/ }),
 
-/***/ 46:
+/***/ 42:
 /*!*********************************************************************!*\
   !*** ./node_modules/phaser-ce/build/custom/phaser-split.js-exposed ***!
   \*********************************************************************/

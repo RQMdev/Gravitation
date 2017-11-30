@@ -1,0 +1,27 @@
+{
+  "name": "multiplayer-gravitation",
+  "version": "1.0.0",
+  "description": "multiplayer POC using Node.js/Express/Socket.io/Phaser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "babelRegisterStart": "node starter.js",
+    "oldBabelStart": "npm run build && node dist/server.js",
+    "build": "rimraf dist/ && babel ./src/ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./package-lock.json --copy-files"
+  },
+  "author": "RQM-",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "phaser": "^2.6.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "rimraf": "^2.6.2"
+  }
+}

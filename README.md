@@ -11,7 +11,7 @@ Other game modes are **Multiplayer** modes. There is two groups of multiplayer m
 Apart from the game itself, the user can create an account where he'll be able to configure the key mapping, retrieve is progression, add friends, invite them in a lobby and see is own rank in the world **Ladder**.
 
 ## Français
-Je suis en train de déveloper un jeu-vidéo jouable dans les navigateurs web récents et ce, sur tout types d'appareil, ordinateur de bureau, tablettes et smartphones.
+Je suis en train de développer un jeu-vidéo jouable dans les navigateurs web récents et ce, sur tout types d'appareil, ordinateur de bureau, tablettes et smartphones.
 
 En ce qui concerne l'expérience de jeu, le joueur controllera un vaisseau spatial dans un environnement 2D. Ce vaisseau subira la **Gravité**. Le joueur sera capable d'orienter le vaisseau, de le faire avancer dans la direction vers laquelle il pointe. Il sera également capable de tirer différentes munitions.
 

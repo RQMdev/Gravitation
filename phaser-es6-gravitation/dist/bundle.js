@@ -659,7 +659,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6)) {
   var createArrayIncludes = __webpack_require__(/*! ./_array-includes */ 52);
   var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 59);
   var ArrayIterators = __webpack_require__(/*! ./es6.array.iterator */ 86);
-  var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+  var Iterators = __webpack_require__(/*! ./_iterators */ 45);
   var $iterDetect = __webpack_require__(/*! ./_iter-detect */ 56);
   var setSpecies = __webpack_require__(/*! ./_set-species */ 38);
   var arrayFill = __webpack_require__(/*! ./_array-fill */ 85);
@@ -1499,7 +1499,8 @@ module.exports = function (target, src, safe) {
 
 
 /***/ }),
-/* 42 */
+/* 42 */,
+/* 43 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_set-to-string-tag.js ***!
   \************************************************************/
@@ -1517,7 +1518,7 @@ module.exports = function (it, tag, stat) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_string-trim.js ***!
   \******************************************************/
@@ -1558,7 +1559,7 @@ module.exports = exporter;
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iterators.js ***!
   \****************************************************/
@@ -1570,7 +1571,7 @@ module.exports = {};
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/_validate-collection.js ***!
   \**************************************************************/
@@ -1586,7 +1587,6 @@ module.exports = function (it, TYPE) {
 
 
 /***/ }),
-/* 46 */,
 /* 47 */,
 /* 48 */
 /*!**************************************************!*\
@@ -1887,7 +1887,7 @@ var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
 var $iterDetect = __webpack_require__(/*! ./_iter-detect */ 56);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var inheritIfRequired = __webpack_require__(/*! ./_inherit-if-required */ 72);
 
 module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
@@ -2343,9 +2343,9 @@ var $export = __webpack_require__(/*! ./_export */ 0);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
 var hide = __webpack_require__(/*! ./_hide */ 12);
 var has = __webpack_require__(/*! ./_has */ 11);
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var $iterCreate = __webpack_require__(/*! ./_iter-create */ 78);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 17);
 var ITERATOR = __webpack_require__(/*! ./_wks */ 5)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
@@ -2422,7 +2422,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 var create = __webpack_require__(/*! ./_object-create */ 36);
 var descriptor = __webpack_require__(/*! ./_property-desc */ 31);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
@@ -2486,7 +2486,7 @@ module.exports = function (KEY) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var ITERATOR = __webpack_require__(/*! ./_wks */ 5)('iterator');
 var ArrayProto = Array.prototype;
 
@@ -2526,7 +2526,7 @@ module.exports = function (object, index, value) {
 
 var classof = __webpack_require__(/*! ./_classof */ 50);
 var ITERATOR = __webpack_require__(/*! ./_wks */ 5)('iterator');
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 module.exports = __webpack_require__(/*! ./_core */ 21).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
@@ -2591,7 +2591,7 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 
 var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 30);
 var step = __webpack_require__(/*! ./_iter-step */ 108);
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 
 // 22.1.3.4 Array.prototype.entries()
@@ -2853,7 +2853,7 @@ var toIndex = __webpack_require__(/*! ./_to-index */ 117);
 var gOPN = __webpack_require__(/*! ./_object-gopn */ 37).f;
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
 var arrayFill = __webpack_require__(/*! ./_array-fill */ 85);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var ARRAY_BUFFER = 'ArrayBuffer';
 var DATA_VIEW = 'DataView';
 var PROTOTYPE = 'prototype';
@@ -3344,7 +3344,7 @@ module.exports = function (fn, args, that) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var $parseInt = __webpack_require__(/*! ./_global */ 2).parseInt;
-var $trim = __webpack_require__(/*! ./_string-trim */ 43).trim;
+var $trim = __webpack_require__(/*! ./_string-trim */ 44).trim;
 var ws = __webpack_require__(/*! ./_string-ws */ 71);
 var hex = /^[-+]?0[xX]/;
 
@@ -3364,7 +3364,7 @@ module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? f
 /***/ (function(module, exports, __webpack_require__) {
 
 var $parseFloat = __webpack_require__(/*! ./_global */ 2).parseFloat;
-var $trim = __webpack_require__(/*! ./_string-trim */ 43).trim;
+var $trim = __webpack_require__(/*! ./_string-trim */ 44).trim;
 
 module.exports = 1 / $parseFloat(__webpack_require__(/*! ./_string-ws */ 71) + '-0') !== -Infinity ? function parseFloat(str) {
   var string = $trim(String(str), 3);
@@ -3638,7 +3638,7 @@ module.exports = function (C, x) {
 "use strict";
 
 var strong = __webpack_require__(/*! ./_collection-strong */ 113);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var MAP = 'Map';
 
 // 23.1 Map Objects
@@ -3679,7 +3679,7 @@ var step = __webpack_require__(/*! ./_iter-step */ 108);
 var setSpecies = __webpack_require__(/*! ./_set-species */ 38);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
 var fastKey = __webpack_require__(/*! ./_meta */ 29).fastKey;
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var SIZE = DESCRIPTORS ? '_s' : 'size';
 
 var getEntry = function (that, key) {
@@ -3825,7 +3825,7 @@ module.exports = {
 "use strict";
 
 var strong = __webpack_require__(/*! ./_collection-strong */ 113);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var SET = 'Set';
 
 // 23.2 Set Objects
@@ -3857,7 +3857,7 @@ var assign = __webpack_require__(/*! ./_object-assign */ 96);
 var weak = __webpack_require__(/*! ./_collection-weak */ 116);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var WEAK_MAP = 'WeakMap';
 var getWeak = meta.getWeak;
 var isExtensible = Object.isExtensible;
@@ -3929,7 +3929,7 @@ var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
 var forOf = __webpack_require__(/*! ./_for-of */ 40);
 var createArrayMethod = __webpack_require__(/*! ./_array-methods */ 26);
 var $has = __webpack_require__(/*! ./_has */ 11);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var arrayFind = createArrayMethod(5);
 var arrayFindIndex = createArrayMethod(6);
 var id = 0;
@@ -4234,7 +4234,7 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */129);
-module.exports = __webpack_require__(/*! /home/pcapprenant21/Documents/Gravitation/phaser-es6-gravitation/src/main.js */331);
+module.exports = __webpack_require__(/*! C:\Users\RQM-\Documents\CA_RQM\Gravitation\phaser-es6-gravitation\src\main.js */331);
 
 
 /***/ }),
@@ -4505,7 +4505,7 @@ var redefine = __webpack_require__(/*! ./_redefine */ 13);
 var META = __webpack_require__(/*! ./_meta */ 29).KEY;
 var $fails = __webpack_require__(/*! ./_fails */ 3);
 var shared = __webpack_require__(/*! ./_shared */ 51);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var uid = __webpack_require__(/*! ./_uid */ 32);
 var wks = __webpack_require__(/*! ./_wks */ 5);
 var wksExt = __webpack_require__(/*! ./_wks-ext */ 92);
@@ -5189,7 +5189,7 @@ var fails = __webpack_require__(/*! ./_fails */ 3);
 var gOPN = __webpack_require__(/*! ./_object-gopn */ 37).f;
 var gOPD = __webpack_require__(/*! ./_object-gopd */ 16).f;
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
-var $trim = __webpack_require__(/*! ./_string-trim */ 43).trim;
+var $trim = __webpack_require__(/*! ./_string-trim */ 44).trim;
 var NUMBER = 'Number';
 var $Number = global[NUMBER];
 var Base = $Number;
@@ -5993,7 +5993,7 @@ $export($export.S, 'String', {
 "use strict";
 
 // 21.1.3.25 String.prototype.trim()
-__webpack_require__(/*! ./_string-trim */ 43)('trim', function ($trim) {
+__webpack_require__(/*! ./_string-trim */ 44)('trim', function ($trim) {
   return function trim() {
     return $trim(this, 3);
   };
@@ -7558,7 +7558,7 @@ if (!USE_NATIVE) {
 }
 
 $export($export.G + $export.W + $export.F * !USE_NATIVE, { Promise: $Promise });
-__webpack_require__(/*! ./_set-to-string-tag */ 42)($Promise, PROMISE);
+__webpack_require__(/*! ./_set-to-string-tag */ 43)($Promise, PROMISE);
 __webpack_require__(/*! ./_set-species */ 38)(PROMISE);
 Wrapper = __webpack_require__(/*! ./_core */ 21)[PROMISE];
 
@@ -7636,7 +7636,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 "use strict";
 
 var weak = __webpack_require__(/*! ./_collection-weak */ 116);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var WEAK_SET = 'WeakSet';
 
 // 23.4 WeakSet Objects
@@ -8440,7 +8440,7 @@ $export($export.P, 'String', {
 "use strict";
 
 // https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-__webpack_require__(/*! ./_string-trim */ 43)('trimLeft', function ($trim) {
+__webpack_require__(/*! ./_string-trim */ 44)('trimLeft', function ($trim) {
   return function trimLeft() {
     return $trim(this, 1);
   };
@@ -8459,7 +8459,7 @@ __webpack_require__(/*! ./_string-trim */ 43)('trimLeft', function ($trim) {
 "use strict";
 
 // https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-__webpack_require__(/*! ./_string-trim */ 43)('trimRight', function ($trim) {
+__webpack_require__(/*! ./_string-trim */ 44)('trimRight', function ($trim) {
   return function trimRight() {
     return $trim(this, 2);
   };
@@ -9705,7 +9705,7 @@ var getKeys = __webpack_require__(/*! ./_object-keys */ 34);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
 var global = __webpack_require__(/*! ./_global */ 2);
 var hide = __webpack_require__(/*! ./_hide */ 12);
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var wks = __webpack_require__(/*! ./_wks */ 5);
 var ITERATOR = wks('iterator');
 var TO_STRING_TAG = wks('toStringTag');
@@ -10572,7 +10572,7 @@ __webpack_require__(/*! pixi */ 125);
 
 __webpack_require__(/*! p2 */ 126);
 
-var _phaser = __webpack_require__(/*! phaser */ 46);
+var _phaser = __webpack_require__(/*! phaser */ 42);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
@@ -10588,7 +10588,7 @@ var _Game = __webpack_require__(/*! ./states/Game */ 339);
 
 var _Game2 = _interopRequireDefault(_Game);
 
-var _config = __webpack_require__(/*! ./config */ 341);
+var _config = __webpack_require__(/*! ./config */ 342);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -10673,7 +10673,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _phaser = __webpack_require__(/*! phaser */ 46);
+var _phaser = __webpack_require__(/*! phaser */ 42);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
@@ -10759,7 +10759,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _phaser = __webpack_require__(/*! phaser */ 46);
+var _phaser = __webpack_require__(/*! phaser */ 42);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
@@ -10855,12 +10855,12 @@ var centerGameObjects = exports.centerGameObjects = function centerGameObjects(o
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _phaser = __webpack_require__(/*! phaser */ 46);
+var _phaser = __webpack_require__(/*! phaser */ 42);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
@@ -10868,7 +10868,7 @@ var _Mushroom = __webpack_require__(/*! ../sprites/Mushroom */ 340);
 
 var _Mushroom2 = _interopRequireDefault(_Mushroom);
 
-var _Player = __webpack_require__(/*! ../sprites/Player */ 343);
+var _Player = __webpack_require__(/*! ../sprites/Player */ 341);
 
 var _Player2 = _interopRequireDefault(_Player);
 
@@ -10882,279 +10882,279 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var _class = function (_Phaser$State) {
-  _inherits(_class, _Phaser$State);
+    _inherits(_class, _Phaser$State);
 
-  function _class() {
-    _classCallCheck(this, _class);
+    function _class() {
+        _classCallCheck(this, _class);
 
-    return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
-  }
-
-  _createClass(_class, [{
-    key: 'create',
-    value: function create() {
-      // Add a Custom Banner
-      // const bannerText = 'Phaser + ES6 + Webpack'
-      // let banner = this.add.text(this.world.centerX, this.game.height - 80, bannerText)
-      // banner.font = 'Bangers'
-      // banner.padding.set(10, 16)
-      // banner.fontSize = 40
-      // banner.fill = '#77BFA3'
-      // banner.smoothed = false
-      // banner.anchor.setTo(0.5)
-
-      // Create a new Instance of a Sprite Object
-      // this.mushroom = new Mushroom({
-      //   game: this.game,
-      //   x: this.world.centerX,
-      //   y: this.world.centerY,
-      //   asset: 'mushroom'
-      // })
-
-      // Add the new Instance of a Sprite to the Game
-      // this.game.add.existing(this.mushroom)
-
-
-      // => Phaser-Gravitation Importation
-
-      // let map,
-      //     layer,
-      //     layer2,
-      //     layer3,
-      //     player,
-      //     star,
-      //     star2,
-      //     star3,
-      //     star4,
-      //     stars,
-      //     bullet,
-      //     bullet2,
-      //     cursors,
-      //     fireButton,
-      //     score = 3,
-      //     scoreText,
-      //     powerUps = 0,
-      //     tileSprite,
-      //     invincibleTime = 100,
-      //     starStartingPositionX,
-      //     starStartingPositionY,
-      //     playerStartingPositionX,
-      //     playerStartingPositionY;
-      this.game.physics.startSystem(_phaser2.default.Physics.ARCADE);
-      this.powerUps = 0;
-      this.invincibleTime = 100;
-
-      // MAP OBJECT
-      this.map = this.add.tilemap('map');
-      // Level 1
-      this.map.addTilesetImage('desert', 'desert');
-      // Level 2
-      // map.addTilesetImage('mininicular', 'mininicular');
-
-      this.layer3 = this.map.createLayer('Tile Layer 3');
-      this.layer3.scrollFactorX = 0.5;
-      this.layer3.scrollFactorY = 0.5;
-      this.layer2 = this.map.createLayer('Tile Layer 2');
-      this.layer2.scrollFactorX = 0.75;
-      this.layer2.scrollFactorY = 0.75;
-      this.layer = this.map.createLayer('Tile Layer 1');
-      this.map.setCollision(1, true, this.layer);
-      // layer2.resizeWorld();
-      this.layer.resizeWorld();
-
-      // POWER UPS OBJECT
-      // Level 1 Position
-      this.starStartingPositionX = 350;
-      this.starStartingPositionY = this.game.world.height - 100;
-
-      // Level 2 Position
-      // starStartingPositionX = game.world.width - 350;
-      // starStartingPositionY = 3000;
-      this.stars = game.add.group();
-      this.stars.enableBody = true;
-      this.star = this.stars.create(this.starStartingPositionX, this.starStartingPositionY, 'star');
-      this.star2 = this.stars.create(600, 1200, 'star');
-      this.star3 = this.stars.create(800, 1200, 'star');
-      this.star4 = this.stars.create(1000, 1200, 'star');
-      this.star.body.gravity.y = 300;
-      this.star.body.bounce.y = 0.3;
-
-      // PLAYER OBJECT
-      // Level 1 Position
-      this.playerStartingPositionX = 300;
-      this.playerStartingPositionY = game.world.height - 150;
-
-      // Create a new Instance of a Sprite Object
-      // this.player = new Player({
-      //   game: this.game,
-      //   x: this.playerStartingPositionX,
-      //   y: this.playerStartingPositionY,
-      //   asset: 'ship'
-      // });
-      // // this.game.physics.arcade.enable(this.player);
-      // this.camera.follow(this.player);
-
-      // Level 2 Position
-      // playerStartingPositionX = 1560;
-      // playerStartingPositionY = game.world.height - 150;
-      this.player = game.add.sprite(this.playerStartingPositionX, this.playerStartingPositionY, 'ship');
-      this.player.anchor.setTo(0.5, 0.5);
-      this.game.physics.arcade.enable(this.player);
-
-      this.player.rotation = -Math.PI / 2;
-      this.player.body.drag.x = 200;
-      this.player.body.drag.y = 100;
-      this.player.body.maxVelocity.set(300);
-      this.player.body.bounce.y = 0;
-      this.player.body.gravity.y = 300;
-      this.player.body.collideWorldBounds = true;
-      this.camera.follow(this.player);
-
-      // WEAPON OBJECT
-      this.bullet = game.add.weapon(100, 'bullet');
-      this.bullet.scale = 0.1;
-      this.bullet.bulletKillType = _phaser2.default.Weapon.KILL_WORLD_BOUNDS;
-      this.bullet.bulletSpeed = 500;
-      this.bullet.fireRate = 300;
-      this.bullet.multiFire = true;
-      this.bullet.bulletInheritSpriteSpeed = false;
-      this.bullet.trackSprite(this.player, 16, 0, true);
-
-      this.bullet2 = game.add.weapon(100, 'bullet');
-      this.bullet2.scale = 0.1;
-      this.bullet2.bulletKillType = _phaser2.default.Weapon.KILL_WORLD_BOUNDS;
-      this.bullet2.bulletSpeed = 200;
-      this.bullet2.fireRate = 300;
-      this.bullet2.multiFire = true;
-
-      // Keys
-      this.cursors = this.game.input.keyboard.createCursorKeys();
-      this.fireButton = this.game.input.keyboard.addKey(_phaser2.default.KeyCode.SPACEBAR);
-      // HUD Object ?
-      // Score
-      this.score = 3;
-      this.scoreText = this.game.add.text(16, 16, this.score, { fontSize: '32px', fill: '#fff' });
-      this.scoreText.fixedToCamera = true;
-      // Fullscreen
-      this.game.scale.fullScreenScaleMode = _phaser2.default.ScaleManager.EXACT_FIT;
+        return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
     }
-  }, {
-    key: 'update',
-    value: function update() {
-      console.log('Game.js Update !');
-      // Collision Methods
-      // Player VS PowerUp Func
-      this.collectStar = function (player, star) {
-        star.kill();
-        this.powerUps++;
-      };
-      // Weapon VS Map Func
-      this.destroyBullet = function (bullet, layer) {
-        bullet.kill();
-      };
-      // Player VS Map
-      this.hitWall = this.game.physics.arcade.collide(this.player, this.layer);
-      // PowerUp VS Map
-      this.game.physics.arcade.collide(this.stars, this.layer);
-      // Player VS PowerUp
-      this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
-      // Weapon VS Map
-      this.game.physics.arcade.collide(this.bullet.bullets, this.layer, this.destroyBullet);
 
-      // Shield Timer
-      if (this.invincibleTime > 0) {
-        this.invincibleTime--;
-      }
+    _createClass(_class, [{
+        key: 'create',
+        value: function create() {
+            // Add a Custom Banner
+            // const bannerText = 'Phaser + ES6 + Webpack'
+            // let banner = this.add.text(this.world.centerX, this.game.height - 80, bannerText)
+            // banner.font = 'Bangers'
+            // banner.padding.set(10, 16)
+            // banner.fontSize = 40
+            // banner.fill = '#77BFA3'
+            // banner.smoothed = false
+            // banner.anchor.setTo(0.5)
 
-      // Shield Destroy Method
-      if (this.invincibleTime == 0 && this.player.shield) {
-        this.player.shield.destroy();
-      }
+            // Create a new Instance of a Sprite Object
+            // this.mushroom = new Mushroom({
+            //   game: this.game,
+            //   x: this.world.centerX,
+            //   y: this.world.centerY,
+            //   asset: 'mushroom'
+            // })
 
-      // Losing a life on PlayerHitWall AND Shield Create Method
-      if (this.hitWall && this.invincibleTime == 0) {
-        this.score = this.score - 1;
-        this.scoreText.text = this.score;
-        this.invincibleTime = 100;
-        this.player.shield = game.add.sprite(16, 0, 'shield');
-        this.player.shield.anchor.set(0.5);
-        this.player.shield.scale.set(0.5);
-        this.player.addChild(this.player.shield);
-      }
+            // Add the new Instance of a Sprite to the Game
+            // this.game.add.existing(this.mushroom)
 
-      // Kill Player when No More Life
-      if (this.score <= 0) {
-        this.player.kill();
-      }
 
-      // Player Acceleration
-      if (this.cursors.up.isDown) {
-        this.game.physics.arcade.accelerationFromRotation(this.player.rotation, 900, this.player.body.acceleration);
-      } else {
-        this.player.body.acceleration.set(0);
-      }
+            // => Phaser-Gravitation Importation
 
-      // Player Rotation
-      if (this.cursors.left.isDown) {
-        this.player.body.angularVelocity = -200;
-      } else if (this.cursors.right.isDown) {
-        this.player.body.angularVelocity = 200;
-      } else {
-        this.player.body.angularVelocity = 0;
-      }
+            // let map,
+            //     layer,
+            //     layer2,
+            //     layer3,
+            //     player,
+            //     star,
+            //     star2,
+            //     star3,
+            //     star4,
+            //     stars,
+            //     bullet,
+            //     bullet2,
+            //     cursors,
+            //     fireButton,
+            //     score = 3,
+            //     scoreText,
+            //     powerUps = 0,
+            //     tileSprite,
+            //     invincibleTime = 100,
+            //     starStartingPositionX,
+            //     starStartingPositionY,
+            //     playerStartingPositionX,
+            //     playerStartingPositionY;
+            this.game.physics.startSystem(_phaser2.default.Physics.ARCADE);
+            this.powerUps = 0;
+            this.invincibleTime = 100;
 
-      // Weapon Trigger AND Configuration
-      if (this.fireButton.isDown && this.powerUps == 1) {
-        this.bullet.fire();
-        // bullet.fire();
-        // bullet.fire();
-      } else if (this.fireButton.isDown && this.powerUps == 2) {
-        this.bullet.bulletSpeed = 400;
-        this.bullet.fire();
-        this.player.rotation += 0.1;
-        this.bullet.fire();
-        this.player.rotation -= 0.2;
-        this.bullet.fire();
-        this.player.rotation += 0.1;
-      } else if (this.fireButton.isDown && this.powerUps == 3) {
-        this.bullet.bulletSpeed = 50;
-        this.bullet.fireRate = 1000;
-        this.bullet.fire();
-        for (var i = 0; i < 6; i++) {
-          this.player.rotation += 0.4 * i;
-          this.bullet.fire();
-          this.player.rotation -= 0.8 * i;
-          this.bullet.fire();
-          this.player.rotation += 0.4 * i;
+            // MAP OBJECT
+            this.map = this.add.tilemap('map');
+            // Level 1
+            this.map.addTilesetImage('desert', 'desert');
+            // Level 2
+            // map.addTilesetImage('mininicular', 'mininicular');
+
+            this.layer3 = this.map.createLayer('Tile Layer 3');
+            this.layer3.scrollFactorX = 0.5;
+            this.layer3.scrollFactorY = 0.5;
+            this.layer2 = this.map.createLayer('Tile Layer 2');
+            this.layer2.scrollFactorX = 0.75;
+            this.layer2.scrollFactorY = 0.75;
+            this.layer = this.map.createLayer('Tile Layer 1');
+            this.map.setCollision(1, true, this.layer);
+            // layer2.resizeWorld();
+            this.layer.resizeWorld();
+
+            // POWER UPS OBJECT
+            // Level 1 Position
+            this.starStartingPositionX = 350;
+            this.starStartingPositionY = this.game.world.height - 100;
+
+            // Level 2 Position
+            // starStartingPositionX = game.world.width - 350;
+            // starStartingPositionY = 3000;
+            this.stars = game.add.group();
+            this.stars.enableBody = true;
+            this.star = this.stars.create(this.starStartingPositionX, this.starStartingPositionY, 'star');
+            this.star2 = this.stars.create(600, 1200, 'star');
+            this.star3 = this.stars.create(800, 1200, 'star');
+            this.star4 = this.stars.create(1000, 1200, 'star');
+            this.star.body.gravity.y = 300;
+            this.star.body.bounce.y = 0.3;
+
+            // PLAYER OBJECT
+            // Level 1 Position
+            this.playerStartingPositionX = 300;
+            this.playerStartingPositionY = game.world.height - 150;
+
+            // Create a new Instance of a Sprite Object
+            // this.player = new Player({
+            //   game: this.game,
+            //   x: this.playerStartingPositionX,
+            //   y: this.playerStartingPositionY,
+            //   asset: 'ship'
+            // });
+            // // this.game.physics.arcade.enable(this.player);
+            // this.camera.follow(this.player);
+
+            // Level 2 Position
+            // playerStartingPositionX = 1560;
+            // playerStartingPositionY = game.world.height - 150;
+            this.player = game.add.sprite(this.playerStartingPositionX, this.playerStartingPositionY, 'ship');
+            this.player.anchor.setTo(0.5, 0.5);
+            this.game.physics.arcade.enable(this.player);
+
+            this.player.rotation = -Math.PI / 2;
+            this.player.body.drag.x = 200;
+            this.player.body.drag.y = 100;
+            this.player.body.maxVelocity.set(300);
+            this.player.body.bounce.y = 0;
+            this.player.body.gravity.y = 300;
+            this.player.body.collideWorldBounds = true;
+            this.camera.follow(this.player);
+
+            // WEAPON OBJECT
+            this.bullet = game.add.weapon(100, 'bullet');
+            this.bullet.scale = 0.1;
+            this.bullet.bulletKillType = _phaser2.default.Weapon.KILL_WORLD_BOUNDS;
+            this.bullet.bulletSpeed = 500;
+            this.bullet.fireRate = 300;
+            this.bullet.multiFire = true;
+            this.bullet.bulletInheritSpriteSpeed = false;
+            this.bullet.trackSprite(this.player, 16, 0, true);
+
+            this.bullet2 = game.add.weapon(100, 'bullet');
+            this.bullet2.scale = 0.1;
+            this.bullet2.bulletKillType = _phaser2.default.Weapon.KILL_WORLD_BOUNDS;
+            this.bullet2.bulletSpeed = 200;
+            this.bullet2.fireRate = 300;
+            this.bullet2.multiFire = true;
+
+            // Keys
+            this.cursors = this.game.input.keyboard.createCursorKeys();
+            this.fireButton = this.game.input.keyboard.addKey(_phaser2.default.KeyCode.SPACEBAR);
+            // HUD Object ?
+            // Score
+            this.score = 3;
+            this.scoreText = this.game.add.text(16, 16, this.score, { fontSize: '32px', fill: '#fff' });
+            this.scoreText.fixedToCamera = true;
+            // Fullscreen
+            this.game.scale.fullScreenScaleMode = _phaser2.default.ScaleManager.EXACT_FIT;
         }
+    }, {
+        key: 'update',
+        value: function update() {
+            console.log('Game.js Update !');
+            // Collision Methods
+            // Player VS PowerUp Func
+            this.collectStar = function (player, star) {
+                star.kill();
+                this.powerUps++;
+            };
+            // Weapon VS Map Func
+            this.destroyBullet = function (bullet, layer) {
+                bullet.kill();
+            };
+            // Player VS Map
+            this.hitWall = this.game.physics.arcade.collide(this.player, this.layer);
+            // PowerUp VS Map
+            this.game.physics.arcade.collide(this.stars, this.layer);
+            // Player VS PowerUp
+            this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
+            // Weapon VS Map
+            this.game.physics.arcade.collide(this.bullet.bullets, this.layer, this.destroyBullet);
 
-        // && powerUps == 4
-        // } else if (fireButton.isDown ) {
-        // 	bullet.bulletSpeed = 200;
-        // 	bullet.bulletKillType = Phaser.Weapon.KILL_LIFESPAN;
-        // 	bullet.bulletLifespan = 1000;
-        // 	currentBullet = bullet.fire();
-        // 	bullet.onKill.add(function(){
-        // 		bullet2.trackSprite(this);
-        // 		bullet2.fire();
-        // 	}, this);
-        // }
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      // Show FPS
-      this.game.debug.text(game.time.fps || '--', 2, 14, "#00ff00");
+            // Shield Timer
+            if (this.invincibleTime > 0) {
+                this.invincibleTime--;
+            }
 
-      // Add to debug your Sprite in DEV Mode.
-      if (true) {
-        this.game.debug.spriteInfo(this.player, 32, 32);
-      }
-    }
-  }]);
+            // Shield Destroy Method
+            if (this.invincibleTime == 0 && this.player.shield) {
+                this.player.shield.destroy();
+            }
 
-  return _class;
+            // Losing a life on PlayerHitWall AND Shield Create Method
+            if (this.hitWall && this.invincibleTime == 0) {
+                this.score = this.score - 1;
+                this.scoreText.text = this.score;
+                this.invincibleTime = 100;
+                this.player.shield = game.add.sprite(16, 0, 'shield');
+                this.player.shield.anchor.set(0.5);
+                this.player.shield.scale.set(0.5);
+                this.player.addChild(this.player.shield);
+            }
+
+            // Kill Player when No More Life
+            if (this.score <= 0) {
+                this.player.kill();
+            }
+
+            // Player Acceleration
+            if (this.cursors.up.isDown) {
+                this.game.physics.arcade.accelerationFromRotation(this.player.rotation, 900, this.player.body.acceleration);
+            } else {
+                this.player.body.acceleration.set(0);
+            }
+
+            // Player Rotation
+            if (this.cursors.left.isDown) {
+                this.player.body.angularVelocity = -200;
+            } else if (this.cursors.right.isDown) {
+                this.player.body.angularVelocity = 200;
+            } else {
+                this.player.body.angularVelocity = 0;
+            }
+
+            // Weapon Trigger AND Configuration
+            if (this.fireButton.isDown && this.powerUps == 1) {
+                this.bullet.fire();
+                // bullet.fire();
+                // bullet.fire();
+            } else if (this.fireButton.isDown && this.powerUps == 2) {
+                this.bullet.bulletSpeed = 400;
+                this.bullet.fire();
+                this.player.rotation += 0.1;
+                this.bullet.fire();
+                this.player.rotation -= 0.2;
+                this.bullet.fire();
+                this.player.rotation += 0.1;
+            } else if (this.fireButton.isDown && this.powerUps == 3) {
+                this.bullet.bulletSpeed = 50;
+                this.bullet.fireRate = 1000;
+                this.bullet.fire();
+                for (var i = 0; i < 6; i++) {
+                    this.player.rotation += 0.4 * i;
+                    this.bullet.fire();
+                    this.player.rotation -= 0.8 * i;
+                    this.bullet.fire();
+                    this.player.rotation += 0.4 * i;
+                }
+
+                // && powerUps == 4
+                // } else if (fireButton.isDown ) {
+                // 	bullet.bulletSpeed = 200;
+                // 	bullet.bulletKillType = Phaser.Weapon.KILL_LIFESPAN;
+                // 	bullet.bulletLifespan = 1000;
+                // 	currentBullet = bullet.fire();
+                // 	bullet.onKill.add(function(){
+                // 		bullet2.trackSprite(this);
+                // 		bullet2.fire();
+                // 	}, this);
+                // }
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            // Show FPS
+            this.game.debug.text(game.time.fps || '--', 2, 14, "#00ff00");
+
+            // Add to debug your Sprite in DEV Mode.
+            if (true) {
+                this.game.debug.spriteInfo(this.player, 32, 32);
+            }
+        }
+    }]);
+
+    return _class;
 }(_phaser2.default.State);
 
 exports.default = _class;
@@ -11177,7 +11177,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _phaser = __webpack_require__(/*! phaser */ 46);
+var _phaser = __webpack_require__(/*! phaser */ 42);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
@@ -11220,28 +11220,6 @@ exports.default = _class;
 
 /***/ }),
 /* 341 */
-/*!***********************!*\
-  !*** ./src/config.js ***!
-  \***********************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  gameWidth: 1920,
-  gameHeight: 1080,
-  localStorageName: 'phaseres6webpack'
-};
-
-/***/ }),
-/* 342 */,
-/* 343 */
 /*!*******************************!*\
   !*** ./src/sprites/Player.js ***!
   \*******************************/
@@ -11258,7 +11236,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _phaser = __webpack_require__(/*! phaser */ 46);
+var _phaser = __webpack_require__(/*! phaser */ 42);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
@@ -11313,6 +11291,27 @@ var Player = function (_Phaser$Sprite) {
 }(_phaser2.default.Sprite);
 
 exports.default = Player;
+
+/***/ }),
+/* 342 */
+/*!***********************!*\
+  !*** ./src/config.js ***!
+  \***********************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  gameWidth: 1920,
+  gameHeight: 1080,
+  localStorageName: 'phaseres6webpack'
+};
 
 /***/ })
 ],[128]);
