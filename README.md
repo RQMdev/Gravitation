@@ -20,3 +20,18 @@ Il y aura différents mode de jeu. le mode **Aventure**, jouable hors ligne en *
 D'autre mode de jeu **Multijoueur** seront disponible. le mode multijoueur en un contre un s'appellera **Duel** et le mode de 3 ou 4 joueurs s'appellera **Arène**. Dans chacun d'eux, il sera possible de faire des **Courses** à plusieurs dans les mêmes niveau que le **Contre-la-Montre**. Il sera également possible de faire des **Batailles** dans des niveaux spéciaux ou le seul but du jeu et de tuer ses ennemis.
 
 En dehors du jeu, l'utilisateur pourra créer un compte ou il sera capable de configurer les touches du jeu, enregistrer sa progression, ajouter des amis, les inviter dans un **Lobby** et voir son **Classement** mondial.
+
+
+Message to slack :
+
+Bonjour, je suis en train de dev un jeu multijoueur avec Phaser.
+Je veux utiliser node.js et socket.io pour le temps réel.
+Petit problem, j'ai dev un premier POC en l'utilisant et le résultat n'est pas fameux.
+Problème de latence etc...
+Je me suis renseigné un peu sur l'interpolation et la prediction pour essayer de regler un peu ces problemes, par le biais de ce tuto =>
+http://buildnewgames.com/real-time-multiplayer/ ( certe un peu vieux ).
+J'ai cloner le Repo de Demo, mais le résultat est quelque peu décevant!
+J'ai pensé que ca venait du fait d'etre en localhost, donc je l'ai mis sur Heroku => https://socket-io-test-rqm.herokuapp.com/
+mais ce n'est pas beaucoup mieux.
+Ma question est : Avez vous deja utilisez socket.io pour du multiplayer nécessitant une grande précision? et comment qu'on fait pour que sa marche bien ?
+Merci d'avance :):):)

@@ -11,9 +11,11 @@ let Game = {}
 
 Game.init = function () {
   game.stage.disableVisibilityChange = true;
+  game.time.advancedTiming = true;
 }
 
 Game.preload = function() {
+
   game.load.tilemap('map', 'assets/maps/map1.json', null, Phaser.Tilemap.TILED_JSON);
   game.load.image('terrain_tileset', 'assets/tilesets/terrain_tileset.png', 32, 32);
   game.load.image('desert', 'assets/tilesets/desert.png');
@@ -69,6 +71,11 @@ Game.update = function () {
       Game.playerMap[Game.myId].body.acceleration.set(0);
     }
   }
+}
+
+Game.render = function () {
+  // Show FPS
+  this.game.debug.text(game.time.fps || '--', 2, 14, "#00ff00");
 }
 
 Game.addNewPlayer = function (id, x, y) {
