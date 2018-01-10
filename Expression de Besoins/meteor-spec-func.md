@@ -1,6 +1,6 @@
 Auteur : Benoit 'RQM-' Laurent  
 Date de dernière M.A.J: 09/01/2018  
-Version : 1.4.1  
+Version : 1.4.0  
 
 # Spécification Fonctionnelles
 
